@@ -36,47 +36,47 @@
 <div id="filters" class="data-toggle=collapse">
 <div class="filter">
 <div><i class="fa-solid fa-fire icon"></i></div>
-    <p>Trending</p>
+    <p class="para">Trending</p>
 </div>
 <div class="filter">
     <div><i class="fa-solid fa-bed icon"></i></div>
-        <p>Rooms</p>
+        <p class="para">Rooms</p>
     </div>
     <div class="filter">
         <div><i class="fa-solid fa-mountain-city icon"></i></div>
-            <p>Iconic Cities</p>
+            <p class="para">Iconic Cities</p>
         </div>
         <div class="filter">
             <div><i class="fa-solid fa-mountain icon"></i></div>
-                <p>Mountains</p>
+                <p class="para">Mountains</p>
             </div>
             <div class="filter">
                 <div><i class="fa-brands fa-fort-awesome icon"></i></div>
-                    <p>Castles</p>
+                    <p class="para">Castles</p>
                 </div>
                 <div class="filter">
                     <div><i class="fa-solid fa-person-swimming icon"></i></div>
-                        <p>Amazing Pools</p>
+                        <p class="para">Amazing Pools</p>
                     </div>
                     <div class="filter">
                         <div><i class="fa-solid fa-campground icon"></i></div>
-                            <p>Camping</p>
+                            <p class="para">Camping</p>
                         </div>
                         <div class="filter">
                         <div><i class="fa-solid fa-cow icon"></i></div>
-                    <p>Farms</p>
+                    <p class="para">Farms</p>
                 </div>
                 <div class="filter">
                     <div><i class="fa-regular fa-snowflake icon"></i></div>
-                        <p>Arctic</p>
+                        <p class="para">Arctic</p>
                 </div>
                     <div class="filter">
                         <div><i class="fa-solid fa-igloo icon"></i></div>
-                            <p>Domes</p>
+                            <p class="para">Domes</p>
                         </div>
                 <div class="filter">
                         <div><i class="fa-solid fa-sailboat icon"></i></div>
-                        <p>Boats</p>
+                        <p class="para">Boats</p>
             </div>
 <div class="tax-toggle">
     <div class="form-check-reverse form-switch">
@@ -127,11 +127,15 @@
     let body = document.querySelector('body');
     let click = true;
     let icons = document.querySelectorAll('.icon');
+    let paras = document.querySelectorAll('.para');
     btn.addEventListener("click",() => {
         if(click == true) {
         body.style.backgroundColor = 'black';
         for(icon of icons) {
             icon.style.color = 'white';
+        }
+        for(para of paras) {
+            para.style.color = 'white';
         }
         click = false;
     }else {
@@ -139,6 +143,9 @@
         body.style.backgroundColor = 'white';
         for(icon of icons) {
             icon.style.color = 'black';
+        }
+        for(para of paras) {
+            para.style.color = 'black';
         }
     }
 });
