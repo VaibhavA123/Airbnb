@@ -53,6 +53,25 @@
                         <a class="nav-link" href="/logout"><b>Log out</b></a>
                     <% } %>
             </div>
+            <div class="navbar-nav ms-auto">
+                <button class="btn btn-danger color">
+                    Theme
+                </button>
+            </div>
     </div>
     </div>
 </nav>
+
+
+<script>
+    let btn = document.querySelector(".color");
+    let body = document.querySelector('body');
+    let click = true;
+    if(click == true) {
+        body.style.backgroundColor = 'black';
+        click = false;
+    }else {
+        click = true;
+        body.style.backgroundColor = 'white';
+    }
+</script>
