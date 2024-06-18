@@ -70,9 +70,11 @@
     btn.addEventListener("click",() => {
         if(click == true) {
         body.style.backgroundColor = 'black';
+        body.style.color = 'white';
         click = false;
     }else {
         click = true;
+        body.style.color='white';
         body.style.backgroundColor = 'white';
     }
 });
