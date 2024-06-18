@@ -38,6 +38,11 @@
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
             <div class="navbar-nav ms-auto">
+                <button class="btn btn-danger color">
+                    Theme
+                </button>
+            </div>
+            <div class="navbar-nav ms-auto">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations">
                     <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
@@ -53,11 +58,6 @@
                         <a class="nav-link" href="/logout"><b>Log out</b></a>
                     <% } %>
             </div>
-            <div class="navbar-nav ms-auto">
-                <button class="btn btn-danger color">
-                    Theme
-                </button>
-            </div>
     </div>
     </div>
 </nav>
@@ -67,11 +67,14 @@
     let btn = document.querySelector(".color");
     let body = document.querySelector('body');
     let click = true;
-    if(click == true) {
+    btn.addEventListener("click",() => {
+        if(click == true) {
         body.style.backgroundColor = 'black';
         click = false;
     }else {
         click = true;
         body.style.backgroundColor = 'white';
     }
+});
+
 </script>
