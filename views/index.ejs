@@ -35,47 +35,47 @@
 
 <div id="filters" class="data-toggle=collapse">
 <div class="filter">
-<div><i class="fa-solid fa-fire"></i></div>
+<div><i class="fa-solid fa-fire icon"></i></div>
     <p>Trending</p>
 </div>
 <div class="filter">
-    <div><i class="fa-solid fa-bed"></i></div>
+    <div><i class="fa-solid fa-bed icon"></i></div>
         <p>Rooms</p>
     </div>
     <div class="filter">
-        <div><i class="fa-solid fa-mountain-city"></i></div>
+        <div><i class="fa-solid fa-mountain-city icon"></i></div>
             <p>Iconic Cities</p>
         </div>
         <div class="filter">
-            <div><i class="fa-solid fa-mountain"></i></div>
+            <div><i class="fa-solid fa-mountain icon"></i></div>
                 <p>Mountains</p>
             </div>
             <div class="filter">
-                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <div><i class="fa-brands fa-fort-awesome icon"></i></div>
                     <p>Castles</p>
                 </div>
                 <div class="filter">
-                    <div><i class="fa-solid fa-person-swimming"></i></div>
+                    <div><i class="fa-solid fa-person-swimming icon"></i></div>
                         <p>Amazing Pools</p>
                     </div>
                     <div class="filter">
-                        <div><i class="fa-solid fa-campground"></i></div>
+                        <div><i class="fa-solid fa-campground icon"></i></div>
                             <p>Camping</p>
                         </div>
                         <div class="filter">
-                        <div><i class="fa-solid fa-cow"></i></div>
+                        <div><i class="fa-solid fa-cow icon"></i></div>
                     <p>Farms</p>
                 </div>
                 <div class="filter">
-                    <div><i class="fa-regular fa-snowflake"></i></div>
+                    <div><i class="fa-regular fa-snowflake icon"></i></div>
                         <p>Arctic</p>
                 </div>
                     <div class="filter">
-                        <div><i class="fa-solid fa-igloo"></i></div>
+                        <div><i class="fa-solid fa-igloo icon"></i></div>
                             <p>Domes</p>
                         </div>
                 <div class="filter">
-                        <div><i class="fa-solid fa-sailboat"></i></div>
+                        <div><i class="fa-solid fa-sailboat icon"></i></div>
                         <p>Boats</p>
             </div>
 <div class="tax-toggle">
@@ -84,6 +84,9 @@
         <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
     </div>
 </div>
+    <button class="btn btn-danger theme">
+        Theme
+    </button>
                             </div>
 
 
@@ -119,4 +122,24 @@
             }
         }
     });
+
+    let btn = document.querySelector(".theme");
+    let body = document.querySelector('body');
+    let click = true;
+    let icons = document.querySelectorAll('.icon');
+    btn.addEventListener("click",() => {
+        if(click == true) {
+        body.style.backgroundColor = 'black';
+        for(icon of icons) {
+            icon.style.color = 'white';
+        }
+        click = false;
+    }else {
+        click = true;
+        for(icon of icons) {
+            icon.style.color = 'black';
+        }
+        body.style.backgroundColor = 'white';
+    }
+});
 </script>
