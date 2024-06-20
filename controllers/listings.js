@@ -30,7 +30,6 @@ module.exports.createListing = async (req,res,next) => {
     console.log(url,"...",filename);
     const newListing = new Listing(req.body.listing);
     newListing.owner = req.user._id;
-    newListing.placeType=req.user.placeType;
     newListing.image = {url,filename};
     await newListing.save();
     req.flash("success","New Listing created!");
