@@ -126,6 +126,11 @@ app.use("/",userRouter);
 
 
 
+app.get("/rooms",(req,res) => {
+    let data = Listing.find({place:"Rooms"});
+        res.render("rooms.ejs",{data});
+});
+
 
 app.use((err,req,res,next) => {
     let { statusCode = 500,message='Something went wrong!'} = err;
