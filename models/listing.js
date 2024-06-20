@@ -4,6 +4,9 @@ const Review = require('./review.js');
 
 
 const listingSchema = new Schema({
+    place :{
+        type : String,
+    },
     title : {
         type : String,
         required : true,
