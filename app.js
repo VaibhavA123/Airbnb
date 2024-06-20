@@ -129,7 +129,6 @@ app.use("/",userRouter);
 app.get("/listing/rooms",async (req,res) => {
     let data = await Listing.find({place:"Rooms"});
     data.image.url = req.file.path;
-    console.log(data);
         res.render("rooms.ejs",{data});
 });
 
