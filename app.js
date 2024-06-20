@@ -124,7 +124,6 @@ app.use("/listings",listingRouter);
 
 app.get("/listing/rooms",async (req,res) => {
     let data = await Listing.find({place:"Rooms"});
-    console.log(data);
     res.render("rooms.ejs",{data});
 });
 
