@@ -24,9 +24,6 @@ const listingSchema = new Schema({
     country: {
         type : String,
     },
-    place: {
-        type : String,
-    },
     reviews : [
         {
             type : Schema.Types.ObjectId,
@@ -36,6 +33,9 @@ const listingSchema = new Schema({
     owner : {
         type : Schema.Types.ObjectId,
         ref : "User"
+    },
+    place: {
+        type : String,
     },
 });
 
