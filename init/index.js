@@ -21,7 +21,6 @@ const initDB = async () => {
     await Listing.deleteMany({});
     initData.data = initData.data.map((obj) => ({
         ...obj,
-        place:"Hotel",
         owner : "66532fc3ea01cfae804eae9c",
 }));
     await Listing.insertMany(initData.data);
