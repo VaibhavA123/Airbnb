@@ -122,7 +122,7 @@ app.use((req,res,next) => {
 
 app.use("/listings",listingRouter);
 
-app.get("/listings/rooms",async (req,res) => {
+app.get("/listing/rooms",async (req,res) => {
     let data = await Listing.find({place:"Rooms"});
     console.log(data);
     res.send(data);
