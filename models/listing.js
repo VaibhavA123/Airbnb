@@ -24,7 +24,7 @@ const listingSchema = new Schema({
     country: {
         type : String,
     },
-    placeType : {
+    Type : {
         type : String,
     },
     reviews : [
