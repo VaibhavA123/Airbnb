@@ -124,7 +124,8 @@ app.use("/listings",listingRouter);
 
 app.get("/listings/rooms",async (req,res) => {
     let data = await Listing.find({place:"Rooms"});
-        res.send(data);
+    console.log(data);
+    res.send(data);
 });
 
 app.use("/listings/:id/reviews",reviewRouter);
