@@ -36,11 +36,6 @@ module.exports.createListing = async (req,res,next) => {
     res.redirect("/listings");
 };
 
-module.exports.rooms = (req,res) => {
-    let data = Listing.find({place:"Rooms"});
-    let url = req.file.path;
-    res.render("rooms.ejs",{data});
-}
 
 module.exports.renderEditForm = async (req,res) => {
     let { _id } = req.params;

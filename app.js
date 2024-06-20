@@ -122,11 +122,6 @@ app.use((req,res,next) => {
 
 app.use("/listings",listingRouter);
 
-app.get("/listing/rooms",async (req,res) => {
-    let data = await Listing.find({place:"Rooms"});
-    res.render("Room.ejs",{data});
-});
-
 app.use("/listings/:id/reviews",reviewRouter);
 
 app.use("/",userRouter);
